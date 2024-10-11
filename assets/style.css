@@ -3,17 +3,19 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  background: #7cb4e2;
 }
 
 #navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 200px;
-  background-color: #333;
+  width: 220px;
+  background-color: #534f4f;
   color: white;
   height: 100vh;
-  padding-top: 10px;
+  padding-top: 30px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
 }
 
 #navbar a {
@@ -21,6 +23,7 @@ body {
   display: block;
   padding: 10px;
   text-decoration: none;
+  transition: background-color 0.3s;
 }
 
 #navbar a:hover {
@@ -28,21 +31,32 @@ body {
 }
 
 #main-doc {
-  margin-left: 220px;
+  margin-left: 240px;
   padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .main-section {
+  background: white;
   margin-bottom: 20px;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #333;
+}
+
+.main-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
   #navbar {
-      position: relative;
+      position: sticky;
+      top: 0;
       width: 100%;
       height: auto;
   }
@@ -56,9 +70,11 @@ body {
   #main-doc {
       margin-left: 0;
       padding: 10px;
+      grid-template-columns: 1fr;
   }
 }
 
 html {
   scroll-behavior: smooth;
 }
+

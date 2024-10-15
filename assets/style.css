@@ -20,6 +20,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
+  text-align: center;
 }
 
 .nav-link {
@@ -29,11 +30,12 @@ nav {
   margin: 0.5rem 0;
   display: inline-block;
   font-weight: bold;
+  transition: background-color 0.3s, border-radius 0.3s;
 }
 
 .nav-link:hover {
   background-color: #52b788;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 main {
@@ -48,10 +50,11 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   margin-bottom: 2rem;
+  transition: box-shadow 0.3s;
 }
 
 section header {
-  color: #1b4332;
+  color: #fff;
   font-size: 1.5em;
   margin-bottom: 1rem;
 }
@@ -64,13 +67,6 @@ p, ul, img {
 ul {
   list-style-type: none;
   padding-left: 0;
-}
-
-ul li {
-  background: #d8f3dc;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-  border-left: 4px solid #52b788;
 }
 
 img {
@@ -89,9 +85,47 @@ a:hover {
   text-decoration: underline;
 }
 
-code {
-  background-color: #edf6f9;
-  padding: 0.25rem;
-  border-radius: 5px;
+.main-section {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.main-section header {
+  color: #fff;
+  font-size: 1.75em;
+  margin-bottom: 1rem;
+}
+
+.main-section p, .main-section ul {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.main-section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.main-section li {
+  margin-bottom: 0.5rem;
+}
+
+.main-section strong {
   color: #2d6a4f;
+}
+
+@media (max-width: 768px) {
+  main {
+      padding: 1rem;
+  }
+  section {
+      padding: 1rem;
+      margin-bottom: 1rem;
+  }
+  .nav-link {
+      padding: 0.5rem;
+  }
 }
